@@ -25,11 +25,10 @@ nav ul{
 }
 
 nav ul > li{
-    display : inline-block;
+    /* display : inline-block; */
     border-right: 3px solid rgba(0,0,255,0.8);
     /* box-shadow: inset -1px -1px 1px 2px blue ; */
-    float : left;
-    /* display: inline-block; */
+    float : left;    
     height : 80px;
     width:  140px;
     margin-right: 20px;
