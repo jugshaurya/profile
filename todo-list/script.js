@@ -15,12 +15,14 @@ add.addEventListener('click',function (){
 })
 
 
-// 2. changing css if list item is clicked
+// 2. changing CSS if list item is clicked
 let task_list = document.getElementById('task_list')
 task_list.addEventListener('click', function(){
     
+    //  Getting  which list item is selected
     let ele = event.target;
-    console.log("ouch")
+
+    // adding red backgroung and line-through if not already else unselecting in 
     if (ele.style.textDecoration === ""){
         ele.style.background = 'rgba(240,0,0,.8)'
         ele.style.textDecoration = 'line-through';    
@@ -35,8 +37,11 @@ task_list.addEventListener('click', function(){
 // 3. Deleting selected list-items when delete btn is clicked
 let deletebtn = document.getElementById('btn-delete')
 deletebtn.addEventListener('click',function (){
+
+    // Getting list reference
     let task_list = document.getElementById('task_list')
 
+    // Deleting selcted list items if their style is line-through
     let i = 0;
     while (i<task_list.childElementCount) {
         if (task_list.children[i].style.textDecoration === 'line-through'){
