@@ -8,8 +8,12 @@
 
 
 body{
-    width: 60%;
+    width: 90%;
     margin : 0 auto
+}
+
+input{
+    width : 50%;
 }
 
 h1{
@@ -48,4 +52,16 @@ ul li {
 
 li:active {
     text-decoration: line-through;
+}
+
+
+@media (min-width : 750px){
+    body{
+        width: 50%;
+        margin : 0 auto
+    }
+
+    input{
+        width : 40%;
+    }
 }
