@@ -1,0 +1,51 @@
+*{
+    font-size: 24px;
+    font-family: 'Nova Cut', cursive ,sans-serif;
+    line-height: 24px;
+    word-spacing: .2mm;
+    letter-spacing: .08em;
+}
+
+
+body{
+    width: 60%;
+    margin : 0 auto
+}
+
+h1{
+    background: lightgray;
+    text-align: center;
+    padding: 20px;
+}
+
+hr{
+    
+    margin: 10px 0;
+    padding:2px;
+    background: blue;
+}
+
+#wrapper{
+    background: lightgray;
+    padding : 20px;
+    text-align: center;
+}
+
+ul {
+    /* width:80%; */
+    margin : 30px auto;
+    background: white;
+}
+
+ul li {
+    margin-left : -40px;
+    padding: 3px;
+    list-style-type: none ;
+    border-bottom : 3px dotted lightgray;
+    list-style-position: inside;
+}
+
+
+li:active {
+    text-decoration: line-through;
+}
