@@ -12,6 +12,7 @@ li{
 
 #saved-cards{
     border: 1px solid gray;
+    padding:2px;
 }
 
 .s-card{
