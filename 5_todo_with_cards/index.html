@@ -8,22 +8,27 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
+    <h1 style = 'text-align: center;'>TODO LIST</h1>
+    <hr>
+
+    <!-- Current card section -->
+
+    <h2>Current Card</h2>
     <div id = "add-card">
-        <input id='add-todo' type="text" placeholder="   ADD TODO   "> <button id='add-btn'>ADD</button>
-        <h3> Current Card </h3>        
-        <div class='current-container'>        
-            <ul id = 'todo-list'>
-            </ul>
+        <input id='add-todo' type="text" placeholder=" ADD TODO"> 
+        <button id='add-btn'> ADD </button>
+        <div>        
+            <ul id = 'todo-list'></ul>
         </div>
         <button id='delete-btn'>Delete selected</button>
         <button id='save-btn'>Save Card</button>
-
     </div>
-    <hr style= "background: blue;padding:5px;">
+
+    <!-- Saved card section -->
+    
     <div>
         <h2> Saved Cards </h2>
-        <div id = "saved-cards">
-        </div>
+        <div id = "saved-cards"></div>
     </div>
 
     <script src = "index.js"></script>
