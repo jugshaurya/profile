@@ -38,6 +38,7 @@ route.patch('/:id', (req, res, next) => {
 })
 
 route.delete('/:id', (req, res, next) => {
+  
   todos.splice(+req.params.id - 1, 1)
   res.status(200)
   res.send('Deleted!')

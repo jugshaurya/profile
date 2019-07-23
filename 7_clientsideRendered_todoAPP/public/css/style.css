@@ -1,62 +1,74 @@
 *{
-    font-size: 24px;
-    font-family: 'Nova Cut', cursive ,sans-serif;
-    line-height: 24px;
-    word-spacing: .2mm;
-    letter-spacing: .08em;
-}
-
-
-body{
-    width: 90%;
-    margin : 0 auto
+  font-size: 24px;
+  font-family: 'Nova Cut', cursive ,sans-serif;
+  line-height: 24px;
+  word-spacing: .2mm;
+  letter-spacing: .08em;
 }
 
 input{
-    width : 50%;
+  width : 50%;
 }
 
 h1{
-    background: lightgray;
-    text-align: center;
-    padding: 20px;
+  box-shadow: inset 3px 3px 1px gray, inset 6px 6px 1px gray;
+  background: lightgray;
+  text-align: center;
+  padding: 20px;
 }
 
-hr{
-    
-    margin: 10px 0;
-    padding:2px;
-    background: blue;
+/* 
+hr{  
+  margin: 10px 0;
+  padding:2px;
+  background: blue;
+} */
+
+body {
+  padding: 20px;
+  width: 90%;
+  margin : 0 auto;
 }
 
 #wrapper{
-    background: lightgray;
-    padding : 20px;
-    text-align: center;
+  background: lightgray; 
+  padding : 20px;
+  box-shadow: inset 3px 3px 1px gray, inset 6px 6px 1px gray;
+  text-align: center;
+}
+
+#main-wrapper{
+  background: rgba(0,125,0,0.1); 
+  padding : 20px;
+  box-shadow: 3px 3px 10px gray;
+  text-align: center;
 }
 
 ul {
-    /* width:80%; */
-    margin : 30px auto;
-    background: white;
+  /* width:80%; */
+  margin : 30px auto;
+  background: white;
 }
 
 ul li {
-    margin-left : -40px;
-    padding: 3px;
-    list-style-type: none ;
-    border-bottom : 3px dotted lightgray;
-    list-style-position: inside;
+  margin-left : -40px;
+  padding: 3px;
+  list-style-type: none ;
+  box-shadow: inset 3px 3px 1px gray, inset 6px 6px 1px gray;
+  border-bottom : 3px dotted lightgray;
+  list-style-position: inside;
 }
 
 
 @media (min-width : 750px){
-    body{
-        width: 60%;
-        margin : 0 auto
-    }
+  body{
+    width: 60%;
+    margin : 0 auto;
+  }
 
-    input{
-        width : 40%;
-    }
+  input{
+    width : 40%;
+    box-shadow: inset 3px 3px 1px gray, inset 6px 6px 1px gray;
+
+  }
 }

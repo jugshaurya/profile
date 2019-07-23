@@ -21,6 +21,7 @@ const serverFetch = function (){
   .then(serverTodos => todo_state = serverTodos)
   .then(paint)
 }
+
 serverFetch()
 
 const addTodo = function() {    
@@ -59,13 +60,14 @@ const toggle = function (e) {
 
 const deleteTodos = function () {
   // Need to send Multiple request to delete multiple todos
+  const tobeDeletedTodos = todo_state
+    .map((obj, index) => ({...obj, id : index + 1}))
+    .filter(obj => obj.striked)
   
-  Promise.all(todo_state.map((obj, index) => {
-    if (obj.striked) {    
-      return fetch('api/todos/' + (index + 1), {
-        method : 'DELETE',
-      })
-    } 
-  }))
+  Promise.all(tobeDeletedTodos.map((obj, index) => {
+    fetch('api/todos/' + (obj.id - index), {
+      method : 'DELETE', 
+    })
+  }))   
   .then(serverFetch)
 }
