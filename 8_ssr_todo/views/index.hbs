@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Todo List using Render and Paint</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Nova+Cut&display=swap" rel="stylesheet">
+  <style>
+    .striked{
+        text-decoration: line-through;
+    }
+  </style>
+</head>
+<body>
+  <h1>Your Todo List {{name}}</h1>
+
+  <form action="/" method="POST">
+    <input type="text" placeholder=" Enter Task" name = 'title'>
+    <button id = "btn-add"> ADD </button>
+  </form>
+
+  <ul>
+    {{#each todos}}
+      <li {{#if striked }}class='striked'{{/if}}>
+        <form action='/update/{{@index}}' method='POST'>
+          {{title}}
+          <input type="hidden" name='title' value={{title}}>
+          <input type="hidden" name='striked' value={{striked}}>
+          {{#if striked}}
+            <button>Unmark</button>
+          {{else}}
+            <button>Mark</button>
+          {{/if}}
+        </form>
+      </li>
+    {{/each}}
+  </ul>
+
+  <form action="/delete" method="POST">
+    <button>Delete Selected</button>
+  </form>
+</body>
+</html>
